@@ -23,6 +23,10 @@ function viewCart() {
   let cartContent = 'In your cart, you have ';
   const cart = getCart();
   
+  if (cart.length === 0) {
+    return 
+  }
+  
   for (let i = 0; i < cart.length; i++) {
     if (i === cart.length - 1) {
       cartContent += `${cart[i].itemName} at $${cart[i].itemPrice}.`;
