@@ -20,7 +20,16 @@ function addToCart(item) {
 }
 
 function viewCart() {
-  // write your code here
+  let cartContent = 'In your cart, you have ';
+  const cart = getCart();
+  
+  for (let i = 0; i < cart.length; i++) {
+    if (i === cart.length - 1) {
+      cartContent += `${cart[i].itemName} at $${cart[i].itemPrice}.`;
+    } else {
+      cartContent += `${cart[i].itemName} at $${cart[i].itemPrice}, `;
+    }
+  }
 }
 
 function total() {
