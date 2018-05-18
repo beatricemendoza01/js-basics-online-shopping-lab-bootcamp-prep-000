@@ -54,16 +54,18 @@ function total() {
 
 function removeFromCart(item) {
   const cart = getCart();
-  
-  else {
-      return 'That item is not in your cart.';
-    }
+  const cartLength = cart.length;
   
   for (let i = 0; i < cart.length; i++) {
     if (cart[i].itemName === item) {
       delete cart[i];
-      return cart;
     }
+  }
+  
+  if (cartLength === cart.length) {
+    return 'That item is not in your cart.';
+  } else {
+    return cart;
   }
 }
 
