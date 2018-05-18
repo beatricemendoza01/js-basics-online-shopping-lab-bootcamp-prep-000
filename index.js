@@ -10,10 +10,13 @@ function setCart(c) {
 }
 
 function addToCart(item) {
-  return {
-    itemName: name,
-    itemPrice: 
-  }
+  const cart = getCart();
+  cart.push({
+      itemName: item,
+      itemPrice: Math.floor(Math.random() * (max - min) + min)
+    });
+  
+  return `${item} has been added to your cart.`;
 }
 
 function viewCart() {
