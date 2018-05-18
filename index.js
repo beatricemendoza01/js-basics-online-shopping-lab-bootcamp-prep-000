@@ -43,10 +43,9 @@ function viewCart() {
 
 function total() {
   const cart = getCart();
-  let total;
+  let total = 0;
   
   for (let i = 0; i < cart.length; i++) {
-    console.log(parseInt(cart[i].itemPrice));
     total += parseInt(cart[i].itemPrice);
   }
   
