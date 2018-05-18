@@ -30,6 +30,8 @@ function viewCart() {
       cartContent += `${cart[i].itemName} at $${cart[i].itemPrice}, `;
     }
   }
+  
+  return cartContent;
 }
 
 function total() {
