@@ -27,7 +27,7 @@ function viewCart() {
     return 'Your shopping cart is empty.';
   } else {
     if (cart.length === 1) {
-      return cartContent += `${cart[i].itemName} at $${cart[i].itemPrice}.`;
+      return cartContent += `${cart[0].itemName} at $${cart[0].itemPrice}.`;
     }
     
     for (let i = 0; i < cart.length; i++) {
