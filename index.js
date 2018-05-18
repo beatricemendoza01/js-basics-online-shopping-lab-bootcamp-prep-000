@@ -70,7 +70,7 @@ function removeFromCart(item) {
 
 function placeOrder(cardNumber) {
   const cart = getCart();
-  const total = total();
+  const totalAmt = total();
   
   if (!cardNumber) {
     return "Sorry, we don't have a credit card on file for you.";
